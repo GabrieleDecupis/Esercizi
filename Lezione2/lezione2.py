@@ -8,9 +8,11 @@ print("Hello World!! \n")
 # Your message should be simple, such as, “Hello Eric, would you like to learn some Python today?”
 
 print("esercizio 2-3 \n")
+
 name: str = "Giuseppe"
 message: str = f"ciao {name}, ti va di imparare un po' di phyton insieme?"
 print(f"{message}\n")
+print(   )
 
 # print(f"Hello {name}, would you like to learn some Python today?")
 
@@ -19,11 +21,13 @@ print(f"{message}\n")
 # and then print that person’s name in lowercase, uppercase, and title case.
 
 print("esercizio 2-4 \n")
+
 name2: str = "gAbrIelE"
 print(name2)
 print(name2.upper())
 print(name2.lower())
 print(name2.title())
+
 print(      )
 
 # 2-5. Famous Quote: 
@@ -33,16 +37,20 @@ print(      )
 # Albert Einstein once said, “A person who never made a mistake never tried anything new.”
 
 print("esercizio 2-5 \n")
+
 quote: str =  "I am the master of my fate, I am the captain of my soul"
 print(f"William Ernest Henley once said: \"{quote}\".")
+
 print(      )
 # 2-6. Famous Quote 2: 
 # Repeat Exercise 2-5, but this time, represent the famous person’s name using a variable called famous_person. 
 # Then compose your message and represent it with a new variable called message. Print your message. 
 
 print("esercizio 2-6 \n")
+
 famous_person: str = "William Ernest Henley"
 print(f"{famous_person} once said: \"{quote}\".")
+
 print(      )
 
 # 2-8. File Extensions: 
@@ -51,8 +59,10 @@ print(      )
 # Then use the removesuffix() method to display the filename without the file extension, like some file browsers do.
 
 print("esercizio 2-8 \n")
+
 filename: str = "python_notes.txt"
 print(filename.removesuffix(".txt"))
+
 print(      )
 
 # 3-1. Names: 
@@ -60,11 +70,13 @@ print(      )
 # Print each person’s name by accessing each element in the list, one at a time.
 
 print("esercizio 3-1 \n")
+
 names: list = ["Giuseppe","Angelo","Pippo","Pluto",]
 print(names[0])
 print(names[1])
 print(names[2])
 print(names[3])
+
 print(      )
 
 # 3-2. Greetings: 
@@ -72,10 +84,12 @@ print(      )
 # The text of each message should be the same, but each message should be personalized with the person’s name.
 
 print("esercizio 3-2 \n")
+
 print("Ciao", names[0], "come stai?")
 print("Ciao", names[1], "come stai?")
 print("Ciao", names[2], "come stai?")
 print("Ciao", names[3], "come stai?")
+
 print(      )
 
 # 3-3. Your Own List: 
@@ -83,10 +97,12 @@ print(      )
 # Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
 
 print("esercizio 3-3 \n")
+
 mode_of_transportation: list = ["Ferrari 'La Ferrari'","wingsuit","F22 - Raptor"]
 print("I would like to do some laps at Mugello with",mode_of_transportation[0])
 print("I will be very happy if one day I fly with the",mode_of_transportation[1])
 print("I hope that one day I will see a", mode_of_transportation[2])
+
 print(      )
 
 # 3-4. Guest List: 
@@ -95,10 +111,12 @@ print(      )
 # Then use your list to print a message to each person, inviting them to dinner.
 
 print("esercizio 3-4 \n")
+
 guest_list: list = ['Tony Stark','Nelson Mandela','Yvonne Stravonsky']
 print("Hello dear",guest_list[0],"you are invite to my house for a dinner! If you want you can bring your Suits")
 print("Mister",guest_list[1],"it's my pleasure invite you to my house for a dinner. I hope you will come, best wishes!")
 print("Hello", guest_list[2], "will be form me an honor to have you to my dinner. Let me know if you will come!")
+
 print(      )
 
 # 3-5. Changing Guest List: 
@@ -109,6 +127,7 @@ print(      )
 # Print a second set of invitation messages, one for each person who is still in your list.
 
 print("esercizio 3-5 \n")
+
 print(guest_list[1])
 guest_list.pop(1)
 guest_list.append('Miriam Leone')
@@ -116,6 +135,7 @@ print(guest_list)
 print("Hello dear",guest_list[0],"you are invite to my house for a dinner! If you want you can bring your Suits")
 print("Miss",guest_list[1],"it's my pleasure to invite you to my house for a dinner. I hope you will come, best wishes!")
 print("Hello", guest_list[2], "will be form me an honor to have you to my dinner. Let me know if you will come!")
+
 print(      )
 
 # 3-6. More Guests: 
@@ -128,6 +148,7 @@ print(      )
 # Print a new set of invitation messages, one for each person in your list.
 
 print("esercizio 3-6 \n")
+
 print(f"Dear {guest_list[0]}, {guest_list[1]}, {guest_list[2]}, I have a new bigger table so I can invite 3 more person! \nDo you have some suggestions?")
 guest_list.insert(0, "Scarlett Johansson")
 guest_list.insert(2, "Margot Robbie")
@@ -138,6 +159,7 @@ print(f"Hello,{guest_list[2]}, will be form me an honor to have you to my dinner
 print(f"Hello,{guest_list[3]}, will be form me an honor to have you to my dinner. Let me know if you will come!")
 print(f"Hello,{guest_list[4]}, will be form me an honor to have you to my dinner. Let me know if you will come!")
 print(f"Hello,{guest_list[5]}, will be form me an honor to have you to my dinner. Let me know if you will come!")
+
 print(      )
 
 # 3-7. Shrinking Guest List: 
@@ -150,6 +172,7 @@ print(      )
 # Print your list to make sure you actually have an empty list at the end of your program.
 
 print("esercizio 3-7 \n")
+
 print(guest_list)
 eliminato1: str = guest_list.pop(1)
 print(f"I'm really sorry dear {eliminato1} but my dinner is cancelled")
@@ -164,6 +187,7 @@ print(f"Dear {guest_list[0]} and {guest_list[1]}, you're still invited to my din
 del(guest_list[1])
 del(guest_list[0])
 print(guest_list)
+
 print(      )
 
 #3-8. Seeing the World:
@@ -181,6 +205,7 @@ print(      )
 # Print the list to show that its order has changed.
 
 print("esercizio 3-8 \n")
+
 places: list = ["Islanda", "Svezia", "Norvegia", "Hawaii", "Capo Nord"]
 print(places)
 print(sorted(places))
@@ -195,6 +220,7 @@ places.sort()
 print(places)
 places.sort(reverse=True)
 print(places)
+
 print(      )
 
 # 3-9. Dinner Guests: 
@@ -202,7 +228,9 @@ print(      )
 # use len() to print a message indicating the number of people you’re inviting to dinner.
 
 print("esercizio 3-9 \n")
+
 print(len(places))
+
 print(      )
 
 # 3-10. Every Function: 
@@ -211,6 +239,7 @@ print(      )
 # Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
 
 print("esercizio 3-10 \n")
+
 mountains: list = ["Alpi","Pirenei", "Appennini","Urali","Balcani"]
 print(mountains)
 mountains.append("Carpazzi")
@@ -228,6 +257,7 @@ mountains.sort()
 print(mountains)
 del(mountains[0:]) # ha cancellato tutto, altro modo è del(mountains[:7])
 print(mountains)
+
 print(  )
 
 # 6-1. Person: 
@@ -237,11 +267,13 @@ print(  )
 # Print each piece of information stored in your dictionary.
 
 print("Esercizio 6-1\n")
+
 information: dict = {"First Name": 'Gabriele', "Last Name": 'De Cupis', "Age": 27, "City": 'Rome'}
 print(information["First Name"])
 print(information["Last Name"])
 print(information["Age"])
 print(information["City"])
+
 print(          )
 
 # 6-2. Favorite Numbers: 
@@ -251,5 +283,52 @@ print(          )
 # For even more fun, poll a few friends and get some actual data for your program.
 
 print("Esercizio 6-2\n")
+
 favourite_numbers: dict = {"Giuseppe": 17, "Angelo": 98, "Gabriel": 42, "Gioele": 21, "Emanuele": 10}
-print(favourite_numbers)
+print(list(favourite_numbers.keys())[0],list(favourite_numbers.values())[0])
+print(list(favourite_numbers.keys())[1],list(favourite_numbers.values())[1])
+print(list(favourite_numbers.keys())[2],list(favourite_numbers.values())[2])
+print(list(favourite_numbers.keys())[3],list(favourite_numbers.values())[3])
+print(list(favourite_numbers.keys())[4],list(favourite_numbers.values())[4])
+
+print(      )
+
+# altro modo per svolgere l'esercizio con un ciclo for
+
+for k, v in favourite_numbers.items():
+    print(k, v)
+
+print(  )
+
+# 6-3. Glossary: 
+# A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.
+# • Think of five programming words you’ve learned about in the previous chapters. 
+# Use these words as the keys in your glossary, and store their meanings as values.
+# • Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and then its meaning, 
+# or print the word on one line and then print its meaning indented on a second line. 
+# Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
+
+print("Esercizio 6-3\n")
+
+glossary: dict = {"DEL":"elimina un elemento della lista senza restituire un output", "SORTED":"temporaneamente li mette in ordine alfabetico"}
+for k, v in glossary.items():
+    print(f"{k} = {v}")
+
+print( )
+
+# 6-7. People: 
+# Start with the program you wrote for Exercise 6-1. 
+# Make two new dictionaries representing different people, and store all three dictionaries in a list called people. 
+# Loop through your list of people. 
+# As you loop through the list, print everything you know about each person.
+
+print("Esercizio 6-7\n")
+
+information: dict = {"First Name": 'Gabriele', "Last Name": 'De Cupis', "Age": 27, "City": 'Rome'}
+information2: dict = {"First Name": 'Giuseppe', "Last Name": 'Guttoriello', "Age": 28, "City": 'Viterbo'}
+information3: dict = {"First Name": 'Angelo', "Last Name": 'Locarini', "Age": 19, "City": 'Latina'}
+people: list = [information, information2, information3]
+for info in people:
+    for k,v in info.items():
+        print(f"{k} = {v}\n")
+
