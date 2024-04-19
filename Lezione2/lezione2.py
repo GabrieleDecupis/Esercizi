@@ -237,7 +237,7 @@ print(  )
 # Print each piece of information stored in your dictionary.
 
 print("Esercizio 6-1\n")
-information = {"First Name": 'Gabriele', "Last Name": 'De Cupis', "Age": 27, "City": 'Rome'}
+information: dict = {"First Name": 'Gabriele', "Last Name": 'De Cupis', "Age": 27, "City": 'Rome'}
 print(information["First Name"])
 print(information["Last Name"])
 print(information["Age"])
@@ -251,4 +251,5 @@ print(          )
 # For even more fun, poll a few friends and get some actual data for your program.
 
 print("Esercizio 6-2\n")
-#ciao a tutti
+favourite_numbers: dict = {"Giuseppe": 17, "Angelo": 98, "Gabriel": 42, "Gioele": 21, "Emanuele": 10}
+print(favourite_numbers)
