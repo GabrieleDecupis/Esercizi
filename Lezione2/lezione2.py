@@ -7,7 +7,7 @@ print("Hello World!! \n")
 # Use a variable to represent a person’s name, and print a message to that person. 
 # Your message should be simple, such as, “Hello Eric, would you like to learn some Python today?”
 
-print("esercizio 2-3 \n")
+print("Esercizio 2-3 \n")
 
 name: str = "Giuseppe"
 message: str = f"ciao {name}, ti va di imparare un po' di phyton insieme?"
@@ -20,7 +20,7 @@ print(   )
 # Use a variable to represent a person’s name, 
 # and then print that person’s name in lowercase, uppercase, and title case.
 
-print("esercizio 2-4 \n")
+print("Esercizio 2-4 \n")
 
 name2: str = "gAbrIelE"
 print(name2)
@@ -36,7 +36,7 @@ print(      )
 # including the quotation marks: 
 # Albert Einstein once said, “A person who never made a mistake never tried anything new.”
 
-print("esercizio 2-5 \n")
+print("Esercizio 2-5 \n")
 
 quote: str =  "I am the master of my fate, I am the captain of my soul"
 print(f"William Ernest Henley once said: \"{quote}\".")
@@ -46,7 +46,7 @@ print(      )
 # Repeat Exercise 2-5, but this time, represent the famous person’s name using a variable called famous_person. 
 # Then compose your message and represent it with a new variable called message. Print your message. 
 
-print("esercizio 2-6 \n")
+print("Esercizio 2-6 \n")
 
 famous_person: str = "William Ernest Henley"
 print(f"{famous_person} once said: \"{quote}\".")
@@ -58,7 +58,7 @@ print(      )
 # Assign the value 'python_notes.txt' to a variable called filename. 
 # Then use the removesuffix() method to display the filename without the file extension, like some file browsers do.
 
-print("esercizio 2-8 \n")
+print("Esercizio 2-8 \n")
 
 filename: str = "python_notes.txt"
 print(filename.removesuffix(".txt"))
@@ -69,7 +69,7 @@ print(      )
 # Store the names of a few of your friends in a list called names. 
 # Print each person’s name by accessing each element in the list, one at a time.
 
-print("esercizio 3-1 \n")
+print("Esercizio 3-1 \n")
 
 names: list = ["Giuseppe","Angelo","Pippo","Pluto",]
 print(names[0])
@@ -83,7 +83,7 @@ print(      )
 # Start with the list you used in Exercise 3-1, but instead of just printing each person’s name, print a message to them. 
 # The text of each message should be the same, but each message should be personalized with the person’s name.
 
-print("esercizio 3-2 \n")
+print("Esercizio 3-2 \n")
 
 print("Ciao", names[0], "come stai?")
 print("Ciao", names[1], "come stai?")
@@ -96,7 +96,7 @@ print(      )
 # Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several examples. 
 # Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
 
-print("esercizio 3-3 \n")
+print("Esercizio 3-3 \n")
 
 mode_of_transportation: list = ["Ferrari 'La Ferrari'","wingsuit","F22 - Raptor"]
 print("I would like to do some laps at Mugello with",mode_of_transportation[0])
@@ -110,7 +110,7 @@ print(      )
 # Make a list that includes at least three people you’d like to invite to dinner. 
 # Then use your list to print a message to each person, inviting them to dinner.
 
-print("esercizio 3-4 \n")
+print("Esercizio 3-4 \n")
 
 guest_list: list = ['Tony Stark','Nelson Mandela','Yvonne Stravonsky']
 print("Hello dear",guest_list[0],"you are invite to my house for a dinner! If you want you can bring your Suits")
@@ -126,7 +126,7 @@ print(      )
 # Modify your list, replacing the name of the guest who can’t make it with the name of the new person you are inviting.
 # Print a second set of invitation messages, one for each person who is still in your list.
 
-print("esercizio 3-5 \n")
+print("Esercizio 3-5 \n")
 
 print(guest_list[1])
 guest_list.pop(1)
@@ -147,7 +147,7 @@ print(      )
 # Use append() to add one new guest to the end of your list.
 # Print a new set of invitation messages, one for each person in your list.
 
-print("esercizio 3-6 \n")
+print("Esercizio 3-6 \n")
 
 print(f"Dear {guest_list[0]}, {guest_list[1]}, {guest_list[2]}, I have a new bigger table so I can invite 3 more person! \nDo you have some suggestions?")
 guest_list.insert(0, "Scarlett Johansson")
@@ -171,7 +171,7 @@ print(      )
 # Use del to remove the last two names from your list, so you have an empty list. 
 # Print your list to make sure you actually have an empty list at the end of your program.
 
-print("esercizio 3-7 \n")
+print("Esercizio 3-7 \n")
 
 print(guest_list)
 eliminato1: str = guest_list.pop(1)
@@ -204,7 +204,7 @@ print(      )
 # Use sort() to change your list so it’s stored in reverse-alphabetical order.
 # Print the list to show that its order has changed.
 
-print("esercizio 3-8 \n")
+print("Esercizio 3-8 \n")
 
 places: list = ["Islanda", "Svezia", "Norvegia", "Hawaii", "Capo Nord"]
 print(places)
@@ -227,7 +227,7 @@ print(      )
 # Working with one of the programs from Exercises 3, 
 # use len() to print a message indicating the number of people you’re inviting to dinner.
 
-print("esercizio 3-9 \n")
+print("Esercizio 3-9 \n")
 
 print(len(places))
 
@@ -238,7 +238,7 @@ print(      )
 # For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. 
 # Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
 
-print("esercizio 3-10 \n")
+print("Esercizio 3-10 \n")
 
 mountains: list = ["Alpi","Pirenei", "Appennini","Urali","Balcani"]
 print(mountains)
@@ -330,5 +330,92 @@ information3: dict = {"First Name": 'Angelo', "Last Name": 'Locarini', "Age": 19
 people: list = [information, information2, information3]
 for info in people:
     for k,v in info.items():
-        print(f"{k} = {v}\n")
+        print(f"{k} = {v}")
+    print("")
 
+print(     )
+
+# 6-8. Pets: 
+# Make several dictionaries, where each dictionary represents a different pet. 
+# In each dictionary, include the kind of animal and the owner’s name. 
+# Store these dictionaries in a list called pets. Next, loop through your list and as
+# you do, print everything you know about each pet. 
+
+print("Esercizio 6-8\n")
+
+pet1: dict = {"Owner's name": "Gabriele", "Kind of animal": "Dog", "Name": "Astrid"}
+pet2: dict = {"Owner's name": "Pippo", "Kind of animal": "Frog"}
+pet3: dict = {"Owner's name": "Paperino", "Kind of animal": "Duck"}
+pet4: dict = {"Owner's name": "Topolino", "Kind of animal": "Cat"}
+pet5: dict = {"Owner's name": "Pluto", "Kind of animal": "Bird"}
+pets: list = [pet1, pet2, pet3, pet4, pet5]
+for pet in pets:
+    for k,v in pet.items():
+        print(f"{k}: {v}")
+    print()
+
+print(  )
+
+# 6-9. Favorite Places: 
+# Make a dictionary called favorite_places. Think of three names to use as keys in the dictionary, 
+# and store one to three favorite places for each person. 
+# To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. 
+# Loop through the dictionary, and print each person’s name and their favorite places.
+
+print("Esercizio 6-9\n")
+
+favourite_places: dict = {'Gabriele':'Islanda, Norvegia', 'Manuela':'Spagna, Irlanda, Portogallo', 'Marcello': 'Bali'}
+for k,v in favourite_places.items():
+    print(f"{k} loves this places: {v}")
+
+print()
+
+# 6-10. Favorite Numbers: 
+# Modify your program from Exercise 6-2 so each person can have more than one favorite number. 
+# Then print each person’s name along with their favorite numbers.
+
+print("Esercizio 6-10 \n")
+
+favourite_numbers2: dict = {"Giuseppe": (17, 55, 60), "Angelo": (98, 89, 12), "Gabriel": (42, 24), 
+                            "Gioele": (21, 35), "Emanuele": (10, 75)}
+for k,v in favourite_numbers2.items():
+    print(f"{k} favourite numbers are: {v}")
+
+print()
+
+# 6-11. Cities: 
+# Make a dictionary called cities. Use the names of three cities as keys in your dictionary. 
+# Create a dictionary of information about each city and include the country that the city is in, 
+# its approximate population, and one fact about that city. 
+# The keys for each city’s dictionary should be something like country, population, and fact. 
+# Print the name of each city and all of the information you have stored about it.
+
+print("Esercizio 6-11 \n")
+
+cities: dict = {"Rome": [("Italy"), ("5 milion"), ("The capital of the roman Empire")], 
+                "New York": [("USA"), ("8 milion"), ("colonized by Amsterdam")],
+                "Liverpool": [("England"), ("10 milion"), ("the home town of the Beatles")]}
+for k,v in cities.items():
+    print(f"{k} is a city in the state of {v[0]}")
+    print(f"{k} has {v[1]} abitants!")
+    print(f"A fact about {k}: it was {v[2]}")
+    print()
+print()
+
+# 6-12. Extensions: 
+# We’re now working with examples that are complex enough that they can be extended in any number of ways. 
+# Use one of the example programs from this chapter, and extend it by adding new keys and values, 
+# changing the context of the program, or improving the formatting of the output.
+
+print("Esercizio 6-12 \n")
+
+favourite_numbers3: dict = {"Giuseppe": [(17), (55), (60)], "Angelo": [(98), (89), (12)], 
+                            "Gabriel": [(42), (24), (0)], "Gioele": [(21), (35), (0)], 
+                            "Emanuele": [(10), (75), (0)]}
+for k,v in favourite_numbers3.items():
+    for x in range(3):
+        if v[x]!= 0:
+            print(f"The number that {k} choose is {v[x]}")
+        if v[x] == 0:
+            print(f"{k} don't choose another number!")
+    print()
