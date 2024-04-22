@@ -11,12 +11,14 @@
 # such as I really love pizza!
 
 print("Esercizio 4-1 \n")
+
 favourite_pizza: list = ("Margherita", "Boscaiola", "Diavola")
 print(favourite_pizza)
 print()
-for x in range(len(favourite_pizza)):
-    print(f"I like very much the {favourite_pizza[x]}")
+for x in favourite_pizza:
+    print(f"I like very much the {x}")
     print(f"I love this type of pizza \n")
+
 print()
 
 # 4-2. Animals: 
@@ -27,4 +29,62 @@ print()
 # such as Any of these animals would make a great pet!
 
 print("Esercizio 4-2 \n")
+
+animals: list = ("Dog", "Cat", "Parot", "Bunny")
+for x in animals:
+    print(f"I really like {x}, it is very funny!")
+print( )
+print(f"The {0} and the {1} are the most common pets!")
+
+print( )
+
+# 4-3. Counting to Twenty: 
+# Use a for loop to print the numbers from 1 to 20, inclusive.
+
+print("Esercizio 4-3 \n")
+
+for number in range(1, 30):
+    print(number)
+    if number == 20:
+        break
+
+print( )
+
+# 4-4. One Million: 
+# Make a list of the numbers from one to one million, and then use a for loop to print the numbers. 
+# (If the output is taking too long, stop it by pressing CTRL-C or by closing the output window.)
+
+print("Esercizio 4-4\n")
+
+numbers: list = [x for x in range(1, 11)]
+for x in numbers:
+    print(x)
+print()
+
+# 4-5. Summing a Million: 
+# Make a list of the numbers from one to one million, and then use min() and max() to make sure your 
+# list actually starts at one and ends at one million. 
+# Also, use the sum() function to see how quickly Python can add a million numbers.
+
+print("Esercizio 4-5 \n")
+
+numbers: list = [x for x in range(1, 1000001)]
+print(min(numbers))
+print(max(numbers))
+print(sum(numbers))
+
+print()
+
+# 4-6. Odd Numbers: 
+# Use the third argument of the range() function to make a list of the odd numbers from 1 to 20. 
+# Use a for loop to print each number.
+
+print("Esercizio 4-6 \n")
+
+odd_numbers: list = [x for x in range(1, 21, 2)]
+print(f"{odd_numbers} \n")
+for x in odd_numbers:
+    print(x)
+
+print()
 
