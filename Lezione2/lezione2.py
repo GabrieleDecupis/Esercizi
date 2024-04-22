@@ -409,13 +409,11 @@ print()
 
 print("Esercizio 6-12 \n")
 
-favourite_numbers3: dict = {"Giuseppe": [(17), (55), (60)], "Angelo": [(98), (89), (12)], 
-                            "Gabriel": [(42), (24), (0)], "Gioele": [(21), (35), (0)], 
-                            "Emanuele": [(10), (75), (0)]}
+favourite_numbers3: dict = {"Giuseppe": [(17), (55), (60), (58)], "Angelo": [(98), (89), (12), (90)], 
+                            "Gabriel": [(42), (24)], "Gioele": [(21), (35), (86)], 
+                            "Emanuele": [(10), (75)]}
 for k,v in favourite_numbers3.items():
-    for x in range(3):
-        if v[x]!= 0:
+        for x in range(len(v)):
             print(f"The number that {k} choose is {v[x]}")
-        elif v[x] == 0:
-            print(f"{k} don't choose another number!")
-    print()
+        if x == len(v) - 1:
+            print(f"{k} don't choose another number!\n")
