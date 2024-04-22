@@ -59,6 +59,7 @@ print("Esercizio 4-4\n")
 numbers: list = [x for x in range(1, 11)]
 for x in numbers:
     print(x)
+
 print()
 
 # 4-5. Summing a Million: 
