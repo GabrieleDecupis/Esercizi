@@ -416,6 +416,6 @@ for k,v in favourite_numbers3.items():
     for x in range(3):
         if v[x]!= 0:
             print(f"The number that {k} choose is {v[x]}")
-        if v[x] == 0:
+        elif v[x] == 0:
             print(f"{k} don't choose another number!")
     print()
