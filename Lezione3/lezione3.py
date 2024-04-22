@@ -89,3 +89,15 @@ for x in odd_numbers:
 
 print()
 
+# 4-7. Threes: 
+# Make a list of the multiples of 3, from 3 to 30. Use a for loop to print the numbers in your list.
+
+print("Esercizio 4-7 \n")
+
+multiples_of_3: list = [x for x in range(3, 31, 3)]
+print(f"{multiples_of_3} \n")
+for x in multiples_of_3:
+    print(x)
+
+print()
+
