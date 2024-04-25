@@ -238,7 +238,7 @@ print()
 # • Tests for equality and inequality with strings OK
 # • Tests using the lower() method OK
 # • Numerical tests involving equality and inequality, greater than and less
-# than, greater than or equal to, and less than or equal to
+# than, greater than or equal to, and less than or equal to OK
 # • Tests using the and keyword and the or keyword
 # • Test whether an item is in a list
 # • Test whether an item is not in a list
@@ -264,16 +264,20 @@ print()
 
 number2: list = [12, 67, 98, 100]
 number3: list = [11, 67, 100]
+
 for x in number2:
     for y in number3:
         if x == y:
             print(f"Is {x} = or < or > {y}?")
             print(f"Is {x} = {y}?")
-            print(f"TRUE ")
+            print(f"TRUE\n")
         else:
             print(f"Is {x} = or < or > {y}?")
             print(f"Is {x} = {y}?")
-            print(f"FALSE")
+            print(f"FALSE\n")
+
+for x in number2:
+    for y in number3:        
         if y == x:
             print(f"{y} is = {x}")
         elif y > x:
@@ -285,4 +289,5 @@ for x in number2:
         elif y <= x:
             print(f"{y} is <= {x}\n")
 
+print()
 
