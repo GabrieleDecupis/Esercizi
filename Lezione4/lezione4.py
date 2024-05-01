@@ -344,6 +344,5 @@ print()
 #Choose any three programs you wrote for this chapter, and make sure they follow the 
 #styling guidelines described in this section.
 
-print("Esercizio 8-17\n")
-print("Done")
- 
+# Done
+
