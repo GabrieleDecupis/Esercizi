@@ -287,7 +287,7 @@ print(ferrari)
 
 print("Esercizio 8-15\n")
 
-from functions_to_import import media_aritmetica
+from to_import_function import media_aritmetica
 numeri: list = [1,2,3,4,5,6,7,8,9]
 print(media_aritmetica(numeri))
 
@@ -308,33 +308,33 @@ list_of_number: list = [10,11,12,13,14,15,16,17]
 
 # mode 1
 
-import functions_to_import
-print(functions_to_import.media_aritmetica(list_of_number))
+import to_import_function as to_import_function
+print(to_import_function.media_aritmetica(list_of_number))
 print()
 
 # mode 2
 
-from functions_to_import import media_aritmetica
+from to_import_function import media_aritmetica
 print(media_aritmetica(list_of_number))
 print()
 
 # mode 3
 
-from functions_to_import import media_aritmetica as media
+from to_import_function import media_aritmetica as media
 print(media(list_of_number))
 print()
 # in questo modo sto importando la funzione rinominandola, in questo caso l'ho rinominata "media"
 
 # mode 4
 
-import functions_to_import as funzioni
+import to_import_function as funzioni
 print(funzioni.media_aritmetica(list_of_number))
 # in questo caso invece ho importato il file con un nuovo nome, ovvero "funzioni"
 print()
 
 # mode 5
 
-from functions_to_import import *
+from to_import_function import *
 print(media_aritmetica(list_of_number))
 # in questo caso importo tutte le funzioni presenti nel file
 
