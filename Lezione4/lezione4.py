@@ -1,5 +1,5 @@
 # Gabriele De Cupis
-'''
+
 # 8-1. Message: 
 # Write a function called display_message() that prints one sentence telling everyone what you are 
 # learning about in this chapter. Call the function, and make sure the message displays correctly.
@@ -244,7 +244,7 @@ def make_a_sandwich_2()->list:
     print(f"\nYour sandwich will have these ingredients: {sandwich_ingredients}")
 
 make_a_sandwich_2()
-'''
+
 
 # 8-13. User Profile:  
 # Build a profile of yourself by calling build_profile(), 
