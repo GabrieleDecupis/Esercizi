@@ -241,7 +241,7 @@ def make_a_sandwich_2()->list:
             sandwich_ingredients.remove(ingredients_to_remove)
         else:
             break
-    print(f"\nYour sandwich will have these ingredients: {sandwich_ingredients}")
+    print(f"\nYour sandwich will have these ingredients: {sandwich_ingredients}\n")
 
 make_a_sandwich_2()
 
@@ -280,6 +280,8 @@ def make_car(manufacturer: str, model: str, **kwargs: dict) -> dict:
 
 ferrari = make_car('Ferrari', 'Purosangue', color = 'red', traction = 'four-wheel', HP = 725)
 print(ferrari)
+
+print()
 
 # 8-15. Printing Models: 
 # Put the functions for the example printing_models.py in a separate file called printing_functions.py. 
