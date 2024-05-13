@@ -31,7 +31,8 @@ class Person:
         '''
         
         raise Exception("You cannot modify the name!!")
-    # get serve per visualizzare i valori all'interno delle istanza solo se gli attributi hanno _ , set invece serve per modificare i valori
+    # get serve per visualizzare i valori all'interno delle istanza solo se gli attributi hanno _ , 
+    # set invece serve per modificare i valori
     # raise mi permette di bloccare un'eventuale modifica
     def get_ssn(self) -> str:
         '''
