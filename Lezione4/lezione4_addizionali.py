@@ -7,7 +7,7 @@
 
 # - prima faccio la somma, poi devo dividere per il numero di voti inseriti
 
-def average_score(name_student: str, score: list ) -> str:
+def average_score(name_student: str, score: list[int] ) -> str:
     '''
     This part of the function take as input the name of the student and a list of number int. 
     It do the sum and than divide the sum for the number of score
