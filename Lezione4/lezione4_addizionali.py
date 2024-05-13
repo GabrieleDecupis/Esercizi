@@ -9,7 +9,8 @@
 
 def average_score(name_student: str, score: list ) -> str:
     '''
-    This part of the function take as input a list of number int. It do the sum and than divide the sum for the number of score
+    This part of the function take as input the name of the student and a list of number int. 
+    It do the sum and than divide the sum for the number of score
     '''
     sum_scores = sum(score)
     weighted_average = sum_scores / len(score) #media ponderata
