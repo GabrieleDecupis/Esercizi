@@ -56,12 +56,23 @@
 # #########################
 
 # Fra un recinto e l'altro mettete 30 volte il carattere #.
+class ZooKeeper:
+    
+    def __init__(self, name:str, surname:str, id:int) -> None:
+        self.name = name
+        self.surname = surname
+        self.id = id
+
 
 class Zoo:
-    def __init__(self,Fence, Animal, ZooKeeper) -> None:
+    def __init__(self, Fence, Animal, ZooKeeper: list[ZooKeeper]) -> None:
         self.Fence = Fence
         self.Animal = Animal
         self.ZooKeeper = ZooKeeper
+
+    def print_info(self):
+        for zk in self.ZooKeeper:
+            print(zk.name)
 
     
 
@@ -72,7 +83,7 @@ class Fence:
 
 
 class Animal:
-    def __init__(self, name, species, age, height, width, preferred_habitat, health ) -> None:
+    def __init__(self, name, species, age, height, width, preferred_habitat) -> None:
         
         self.name = name
         self.species = species
@@ -81,17 +92,17 @@ class Animal:
         self.width = width
         self.preferred_habitat = preferred_habitat
         self.health = round(100 * (1 / age), 3)
+
+    def __str__(self) -> str:
+        
+        return f"Animal(name={self.name})"
         
 
 
+zk_1: ZooKeeper = ZooKeeper(name="Ciao", surname="Caio", id=1)
 
-
-class ZooKeeper:
+zoo_1: Zoo = Zoo(Fence=None, Animal=None, ZooKeeper=[zk_1])
     
-    def __init__(self, name:str, surname:str, id:int) -> None:
-        self.name = name
-        self.surname = surname
-        self.id = id
     
-
+zoo_1.print_info()
             
