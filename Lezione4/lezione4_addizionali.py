@@ -39,5 +39,67 @@ import random
 def guess_the_number():
     first_question: int = int(input("Specify the range you want to play with, from 0 to: "))
     random_number = random.randrange(first_question)
-    
+    counter_try = 0
+    print()
+    print("You have 10 attemps for guess the number!\n")
+    while counter_try <= 10:
+        x:int = int(input("Insert a number: "))
+        print()
+        if x > random_number:
+            print("Your number is too high!\n")
+        elif x < random_number:
+            print("Your number is too low!\n")
+        else:
+            print("CORRECT!! You guess the number!\n")
+            break
+        counter_try += 1
+        y = 10 - counter_try
+        print(f"You still have {y} attempts available\n")
 
+
+# guess_the_number()
+
+
+# 3. E-commerce Shopping Cart:
+# 
+# Create a function that defines a product with a name, price, and quantity.
+# Create a function that manages the shopping cart, allowing the user to add, remove, and view products in the cart.
+# The function should calculate the cart total and apply any discounts or taxes.
+# Implement a for loop to iterate over the items in the cart and print detailed information about each product and the total.
+
+def product(name: str, price:float, quantity:int) -> list:
+    e_commerce: list = []
+    product:dict = {}
+    if name not in product:
+        product["Name"] = name
+    if price not in product:
+        product["Price"] = price
+    if quantity not in product:
+        product["Quantity"] = quantity
+    
+    e_commerce.append(product)
+    return e_commerce
+
+# 4. Text Analysis:
+# 
+# Create a function that reads a text file and counts the number of occurrences of each word.
+# The function should print a report showing the most frequent words and their number of occurrences.
+# You can use a for loop to iterate over the words in the text and a dictionary to store the occurrences.
+# Implement error handling to handle missing files or other input issues.
+
+def text_analysis(text:str) -> dict:
+    import string
+    word_count: dict = {}
+    text = text.split()
+    parole_senza_punteggiatura = [''.join(parola for parola in parola if parola not in string.punctuation) for parola in text]
+    for x in parole_senza_punteggiatura:
+        if x not in  word_count:
+            word_count[x] = 1
+        elif x in word_count:
+            word_count[x] += 1
+    
+    v = list(word_count.values())
+    k = list(word_count.keys())
+    most_frequent_word = {k[v.index(max(v))] : max(v)}
+    
+    return most_frequent_word
