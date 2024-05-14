@@ -54,9 +54,9 @@
 
 import random
 
-circuito: list = []
-lunghezza_lista = 70
-circuito = ['_'] * lunghezza_lista
+posizione_T = 0
+posizione_H = 0
+round = 1
 
 def tartaruga() -> int:
     x = random.randrange(1, 11)
@@ -80,9 +80,29 @@ def lepre() -> int:
     elif 9 <= x <= 10:
         return -2
 
-posizione_T = 0
-posizione_H = 0
-round = 1
+def posizione(tarta:int, lepre:int):
+    circuito: list = []
+    lunghezza_lista = 70
+    circuito = ['_'] * lunghezza_lista
+
+    if tarta < 0:
+        tarta = 0
+    elif tarta >= 70:
+        tarta = 69
+    
+    circuito[tarta] = "T"
+
+    if lepre < 0:
+        lepre = 0
+    elif lepre >= 70:
+        lepre = 69
+    
+    circuito[lepre] = "H"
+
+    if tarta == lepre:
+        circuito[lepre] = "OUCH"
+    
+    return circuito
 
 print("BANG !!!!! AND THEY'RE OFF !!!!!")
 
@@ -90,47 +110,32 @@ while posizione_H <= 69 and posizione_T <= 69:
 
     print(f"ROUND {round}\n")
 
-    move_tarta = tartaruga()
+    move_tartaruga = tartaruga()
     move_lepre = lepre()
-    
-    circuito[posizione_T] = "_"
-    circuito[posizione_H] = "_"
-    
-    posizione_T += move_tarta
+
+    posizione_T += move_tartaruga
     posizione_H += move_lepre
-    
-    if posizione_T < 0:
-        posizione_T = 0
-    elif posizione_T >= 70:
-        posizione_T = 69
-    
-    if posizione_H < 0:
-        posizione_H = 0
-    elif posizione_H >= 70:
-        posizione_H = 69
 
-    circuito[posizione_T] = "T"
-    circuito[posizione_H] = "H"
-
-    if posizione_H == posizione_T:
-        circuito[posizione_H] = "OUCH"
-    if posizione_T == 69:
-        print(" ".join(circuito))
+    gara = posizione(posizione_T, posizione_H)
+    
+    if posizione_T >= 69:
+        print(" ".join(gara))
         print()
         print("TORTOISE WINS! || YAY!!!")
         break
-    if posizione_H == 69:
-        print(" ".join(circuito))
+    
+    if posizione_H >= 69:
+        print(" ".join(gara))
         print()
         print("HARE WINS! || YAY!!!")
         break
-    if posizione_H == 69 and posizione_T >= 69:
-        print(" ".join(circuito))
+    
+    if posizione_H >= 69 and posizione_T >= 69:
+        print(" ".join(gara))
         print()
         print("IT'S A TIE BUT TORTOISE WINS! || VAY!!!")
-        break 
+        break
     
+    print(" ".join(gara)+ "\n")
+
     round += 1
-    
-    print(" ".join(circuito))
-    print()
