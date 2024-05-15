@@ -69,11 +69,11 @@ def tartaruga() -> int:
 def lepre() -> int:
     x = random.randrange(1, 11)
     if 1 <= x <= 2:
-        return 9
+        return 0
     elif 3 <= x <= 4:
-        return -12
+        return +9
     elif x == 5:
-        return 1
+        return -12
     elif 6 <= x <= 8:
         return 1
     elif 9 <= x <= 10:
