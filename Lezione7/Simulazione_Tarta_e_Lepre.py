@@ -1,4 +1,3 @@
-# 
 # In questo problema ricreerete la classica gara tra la tartaruga e la lepre. Userete la generazione di numeri casuali 
 # per sviluppare una simulazione di questo memorabile evento. I contendenti iniziano la gara dal quadrato \
 # 1 di un percorso composto da 70 quadrati. Ogni quadrato rappresenta una posizione lungo il percorso della corsa. 
