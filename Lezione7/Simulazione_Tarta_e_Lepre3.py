@@ -43,6 +43,33 @@ def tartaruga() -> int:
     else:
         return +1
 
+def energie_tarta(move_tarta: int) -> int:
+    if move_tarta == 3:
+        stamina_round = 5  # modifica stamina_round in stamina_tarta_round
+    elif move_tarta == -6:
+        stamina_round = 10
+    else:
+        stamina_round = 3
+    
+    return stamina_round
+
+def lepre() -> int:
+    x = random.randrange(1, 11)
+    if 1 <= x <= 2:
+        return 0
+    elif 3 <= x <= 4:
+        return +9
+    elif x == 5:
+        return -12
+    elif 6 <= x <= 8:
+        return 1
+    elif 9 <= x <= 10:
+        return -2
+    
+def energie_lepre(move_lepre: int) -> int:
+    if move_lepre == 0:
+        stamina_round
+
 
 
 def posizione(tarta: int) -> list:
@@ -58,18 +85,15 @@ def posizione(tarta: int) -> list:
     return circuito
 
 
+
+
 while posizione_T <= 69:
     print()
-    print(f"Round {round}")
+    print(f"Round {round}\n")
     move_tarta = tartaruga()
-
-    if move_tarta == 3:
-        stamina_tarta -= 5
-    elif move_tarta == -6:
-        stamina_tarta -= 10
-    else:
-        stamina_tarta -= 3
-
+    stamina_round = energie_tarta(move_tarta)
+    
+    stamina_tarta -= stamina_round
     stamina_usata_tarta: int = 100 - stamina_tarta
 
     if stamina_tarta < 0:
