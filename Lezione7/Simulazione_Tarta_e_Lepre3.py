@@ -21,3 +21,76 @@
 #     - Grande scivolata (10% di probabilità): arretra di 12 quadrati e richiede 20 di energia. Non può andare sotto il quadrato 1.
 #     - Piccolo balzo (30% di probabilità): avanza di 1 quadrato e richiede 5 di energia.
 #     - Piccola scivolata (20% di probabilità): arretra di 2 quadrati e richiede 8 di energia. Non può andare sotto il quadrato 1.
+
+
+import random
+
+posizione_T: int = 0
+round: int = 1
+
+
+#valori stamina tartaruga
+
+stamina_tarta: int = 100
+
+
+def tartaruga() -> int:
+    x = random.randrange(1, 11)
+    if x <= 5:
+        return 3
+    elif 6 <= x <= 7:
+        return -6
+    else:
+        return +1
+
+
+
+def posizione(tarta: int) -> list:
+    circuito: list = []
+    lunghezza_lista = 70
+    circuito = ['_'] * lunghezza_lista
+    if tarta < 0:
+        tarta = 0
+    elif tarta >= 70:
+        tarta = 69
+    
+    circuito[tarta] = "T"
+    return circuito
+
+
+while posizione_T <= 69:
+    print()
+    print(f"Round {round}")
+    move_tarta = tartaruga()
+
+    if move_tarta == 3:
+        stamina_tarta -= 5
+    elif move_tarta == -6:
+        stamina_tarta -= 10
+    else:
+        stamina_tarta -= 3
+
+    stamina_usata_tarta: int = 100 - stamina_tarta
+
+    if stamina_tarta < 0:
+        move_tarta = 0
+        stamina_tarta += 10
+        print(" tarta no energie")
+    
+    posizione_T += move_tarta
+
+    gara = posizione(posizione_T)
+
+    lista_stamina = ["|"] * stamina_tarta
+    lista_stamina_usata = ["_"] * stamina_usata_tarta
+    print()
+    
+    print()
+    print(" ".join(gara))
+    print()
+    print("STAMINA TARTA:  " + "".join(lista_stamina) +" " + " ".join(lista_stamina_usata) + f" {stamina_tarta}/100" )
+    round += 1
+
+    if posizione_T == 69:
+        print("Tarta win")
+        break
