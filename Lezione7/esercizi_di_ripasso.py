@@ -100,9 +100,12 @@ def ordine_alfabetico(parole: str) -> str:
 #     Input: Practice makes perfect
 #     Output: PRACTICE MAKES PERFECT
 
-def upper(word:str) -> str:
-    word = word.upper()
-    return word
+def upper(word:list[str]) -> str:
+    capitalize: str = []
+    for x in word:
+        x = x.upper()
+        capitalize.append(x)
+    return capitalize
 
 #print(upper("Practice makes perfect"))
 
@@ -115,4 +118,11 @@ def upper(word:str) -> str:
 #     Input: hello world and practice makes perfect and hello world again
 #     Output: again and hello makes perfect practice world
 
+def fun_7(sentence: str) -> str:
+    word: list = sentence.split()
+    word.sort()
+    word_temp = " ".join(set(word))
+    return word_temp
+
+# print(fun_7("hello world and practice makes perfect and hello world again"))
 
