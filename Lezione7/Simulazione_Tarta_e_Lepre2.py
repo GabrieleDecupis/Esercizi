@@ -94,11 +94,11 @@ while posizione_H <= 69 and posizione_T <= 69:
     print(f"ROUND {round}\n")
 
     if round // 10 in meteo:
-        print("E' spuntato il sole!!")
+        print("E' spuntato il sole!!\n")
         move_tartaruga = tartaruga_sole()
         move_lepre = lepre_sole()
     else:
-        print("Oh no!! Sta piovendo!!")
+        print("Oh no!! Sta piovendo!!\n")
         move_tartaruga = tartaruga_pioggia()
         move_lepre = lepre_pioggia()
     
