@@ -36,22 +36,26 @@ def calcola_stipendio(ore_lavorate: int) -> float:
 
 def print_seq(): 
     
+    a:list = [1, 2, 3, 4, 5, 6, 7]
     print("Sequenza a):")
     for x in a:
         print(x)
     
     print()
 
+    b:list = [3, 8, 13, 18, 23]
     print("Sequenza b):")
     for x in b:
         print(x)
     print()
 
+    c:list = [20, 14, 8, 2, -4, -10]
     print("Sequenza c):")
     for x in c:
         print(x)
     print()
 
+    d:list = [19, 27, 35, 43, 51]
     print("Sequenza d):")
     for x in d:
         print(x)
