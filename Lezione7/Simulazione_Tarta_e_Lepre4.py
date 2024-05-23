@@ -91,18 +91,26 @@ while posizione_H <= 69 and posizione_T <= 69:
     for k,v in ostacoli.items():
         if posizione_T == k:
             posizione_T -= v
-            print("T get a malus")
+            print("T get a malus\n")
         elif posizione_H == k:
             posizione_H -= v
-            print("H get a malus")
+            print("H get a malus\n")
     
     for k,v in bonus.items():
         if posizione_T == k:
             posizione_T += v
-            print("T get a bonus")
+            if posizione_T > 69:
+                posizione_T -= v
+                print("T get a bonus but is out of range\n")
+            else:
+                print("T get a bonus")
         elif posizione_H == k:
             posizione_H += v
-            print("H get a bonus")
+            if posizione_H > 69:
+                posizione_H -= v
+                print("H get a bonus but is out of range")
+            else:
+                print("H get a bonus")
 
 
     gara = posizione(posizione_T, posizione_H)
