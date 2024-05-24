@@ -28,7 +28,7 @@ class Fence:
         self.animals: list[Animal] = []
         self.animals = [animal for animal in animals if self.is_available(animal) and animal.preferred_habitat == habitat]
         for animal in self.animals:
-            animal.fence = self
+            self.animals.append(animal)
         
     def is_available(self, add_animal: Animal, feed: bool = False) -> bool:
         '''
