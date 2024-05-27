@@ -20,6 +20,8 @@ class Prodotto:
     def __init__(self, nome_prodotto: str, quantità_prodotto: str) -> None:
         self.nome_prodotto = nome_prodotto
         self.quantità_prodotto = quantità_prodotto
+    
+
 
 class Magazzino:
     def __init__(self) -> None:
@@ -40,13 +42,17 @@ class Magazzino:
             if nome_prodotto == prodotto_in_magazzino.nome_prodotto and prodotto_in_magazzino.quantità_prodotto != 0:
                 return f"{nome_prodotto} è disponibile in queste quantità: {prodotto_in_magazzino.quantità_prodotto}"
         return f"{nome_prodotto} non è disponibile nel magazzino"
+    
+    def __str__(self) -> str:
+        return self.prodotti 
+    
 
+    
 prodotto1 = Prodotto("mouse", 10)
 prodotto2 = Prodotto("cappello", 0)
 magazzino1 = Magazzino()
 magazzino1.aggiungi_prodotto([prodotto1, prodotto2])
-print(magazzino1.cerca_prodotto("mouse"))
-print(magazzino1.cerca_prodotto("cappello"))
+
 
         
         
