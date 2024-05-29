@@ -118,10 +118,62 @@ class MovieCatalog:
         else:
             for movie in movies:
                 self.catalogo[director_name].append(movie)
+    
+    def remove_movie(self, director_name: str, movie: str):
+        if director_name in self.catalogo:
+            if movie in self.catalogo[director_name]:
+                self.catalogo[director_name].remove(movie)
+            else:
+                print(f"Non è stato possibile rimuovere il film {movie} in quanto non è presente nell'elenco del regista {director_name}")
+            if self.catalogo[director_name] == []:
+                x = input(f"Il regista {director_name} non ha più film nell'elenco, vuoi rimuoverlo? Y/N: ")
+                if x == "Y":
+                    del self.catalogo[director_name]
+        else:
+            print(f"Il regista {director_name} non è presente nel catalogo")
+        
+    def list_directors(self) -> str:
+        registi: list = []
+        for regista in self.catalogo.keys():
+            registi.append(regista)
+        return f"Registi disponibili: {', '.join(registi)}"
 
-catalogo1 = MovieCatalog()
-catalogo1.add_movie("ciccio", ["1", "2", "3"])
-print(catalogo1.catalogo["ciccio"])
-catalogo1.add_movie("ciccio", ["4", "5", "6"])
-print(catalogo1.catalogo["ciccio"])        
+    def get_movies_by_director(self, director_name) -> str:
+        if director_name in self.catalogo:
+            films: list = []
+            for film in self.catalogo[director_name]:
+                films.append(film)
+            if films == []:
+                return f"Il regista {director_name} è presente nel catalogo ma non ci sono film a lui assegnati!"
+            return f"I film del regista {director_name} sono: {', '.join(films)}"
+        else:
+            return f"Il regista {director_name} non è presente nell'elenco"
+    
+    def search_movies_by_title(self, title: str) -> list[str]:
+        result: list = []
+        title = title.lower()
+        for regista in self.catalogo:
+            films: list[str] = self.catalogo[regista]
+            for film in films:
+                if title in film:
+                    if regista not in result:
+                        result.append(regista)
+                    result.append(film)
+        if result:
+            return result
+        return f"Non è stato trovato nessun film con il titolo: {title} "
 
+
+
+
+
+# catalogo1 = MovieCatalog()
+# catalogo1.add_movie("ciccio", ["1", "2", "3"])
+# catalogo1.add_movie("ciccia", ["1", "23", "4", "5","3"])
+# catalogo1.remove_movie("ciccio", "1")
+# catalogo1.remove_movie("ciccio", "2")
+# catalogo1.remove_movie("ciccio", "3")
+# print(catalogo1.catalogo)
+# print(catalogo1.list_directors())
+# print(catalogo1.get_movies_by_director("ciccio"))
+# print(catalogo1.search_movies_by_title("2"))
