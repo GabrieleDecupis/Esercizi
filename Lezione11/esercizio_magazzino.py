@@ -25,7 +25,7 @@ class Prodotto:
 
 class Magazzino:
     def __init__(self) -> None:
-        self.prodotti = []
+        self.prodotti: list[Prodotto] = []
     
     def aggiungi_prodotto(self, prodotto: Prodotto):
         if prodotto not in self.prodotti:
@@ -48,10 +48,6 @@ class Magazzino:
     
 
     
-prodotto1 = Prodotto("mouse", 10)
-prodotto2 = Prodotto("cappello", 0)
-magazzino1 = Magazzino()
-magazzino1.aggiungi_prodotto([prodotto1, prodotto2])
 
 
         
