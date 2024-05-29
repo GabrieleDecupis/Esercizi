@@ -185,35 +185,3 @@ class Library:
     
     def get_borrowed_books(self, member_id: str) -> list[Book]:
         return self.members[member_id].borrowed_books
-
-
-                
-
-library = Library()
-
-library.add_book("B001", "The Great Gatsby", "F. Scott Fitzgerald")
-library.add_book("B002", "1984", "George Orwell")
-library.add_book("B003", "To Kill a Mockingbird", "Harper Lee")
-
-print(library.books)
-
-# Register members
-library.register_member("M001", "Alice")
-library.register_member("M002", "Bob")
-library.register_member("M003", "Charlie")
-
-print(library.members)
-
-# Borrow books
-library.borrow_book("M001", "B001")
-print(library.members["M001"].borrowed_books)
-print(library.members["M002"].borrowed_books)
-
-library.borrow_book("M002", "B002")
-
-print(library.members["M001"].borrowed_books)
-print(library.members["M002"].borrowed_books)
-
-
-#print(library.get_borrowed_books("M001"))  # Expected output: ['The Great Gatsby']
-#print(library.get_borrowed_books("M002"))  # Expected output: ['1984']
