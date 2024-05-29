@@ -164,9 +164,6 @@ class MovieCatalog:
         return f"Non è stato trovato nessun film con il titolo: {title} "
 
 
-
-
-
 # catalogo1 = MovieCatalog()
 # catalogo1.add_movie("ciccio", ["1", "2", "3"])
 # catalogo1.add_movie("ciccia", ["1", "23", "4", "5","3"])
