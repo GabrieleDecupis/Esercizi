@@ -175,13 +175,89 @@ class Library:
         self.members[member_id] = member
     
     def borrow_book(self, member_id: str, book_id: str):
-        if book_id in self.books and self.books[book_id].is_borrowed != True:
-            self.books[book_id].borrow_book()
-            self.members[member_id].borrow_book(self.books[book_id])
+        if member_id in self.members:    
+            if book_id in self.books:
+                if self.books[book_id].is_borrowed != True:
+                    self.books[book_id].borrow_book()
+                    self.members[member_id].borrow_book(self.books[book_id])
+                else:
+                    return "Book is already borrowed"
+            else:
+                return "Book not found"
+        else:
+            return "Member not found"
 
     def return_book (self, member_id: str, book_id: str):
         if member_id in self.members and book_id in self.books:
             self.members[member_id].return_book(self.books[book_id])
+        else:
+            return "Book not borrowed by this member"
     
     def get_borrowed_books(self, member_id: str) -> list[Book]:
         return self.members[member_id].borrowed_books
+
+
+# esercizio 6:
+
+# Data una stringa s e una lista di stringhe wordDict, restituisce True se s può essere segmentato in una sequenza separata 
+# da spazi di una o più parole del dizionario; False altrimenti.
+
+# Tieni presente che la stessa parola nel dizionario può essere riutilizzata più volte nella segmentazione.
+
+# For example:
+
+# print(word_break("leetcode",["leet","code"]))     True
+
+# print(word_break("applepenapple", ["apple","pen"]))   True
+
+# print(word_break("catsandog",["cats","dog","sand","and","cat"]))  False
+
+def word_break(s: str, wordDict: list[str]) -> bool:
+    count = 0
+    parola_nella_lista = 0
+    while parola_nella_lista <= len(wordDict) - 1:
+        x = s[:count]
+        if wordDict[parola_nella_lista] == x:
+            s = s[count:]
+            count = 0
+            del wordDict[parola_nella_lista]
+        else:
+            count += 1
+            if count > len(s):
+                count = 0
+                parola_nella_lista += 1
+    if wordDict == []:
+        return True
+    else:
+        return False
+
+
+# esercizio 7
+
+# Date due stringhe s e t, restituire True se t è un anagramma di s, e False altrimenti.
+
+# Un anagramma è una parola o una frase formata riorganizzando le lettere di una parola o frase diversa, in genere 
+# utilizzando tutte le lettere originali esattamente una volta.
+
+# For example:
+
+# print(anagram("anagram","nagaram")) True
+
+def anagram(s: str, t: str) -> bool:
+    if len(s) == len(t):
+        lista_vuota = []
+        lista_vuota2 = []
+        for lettera in s:
+            lista_vuota2.append(lettera)
+        for lettera in t:
+            if lettera in lista_vuota2:
+                lista_vuota.append(lettera)
+                lista_vuota2.remove(lettera)
+        if len(lista_vuota) == len(s):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+print(anagram("anagram","anargame")) 
