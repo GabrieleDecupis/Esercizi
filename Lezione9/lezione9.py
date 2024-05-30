@@ -93,11 +93,71 @@ def symmetric(tree: list[int]) -> bool:
 #     Solo le celle riempite devono essere convalidate secondo le regole menzionate.
 # 
 
-# def valid_sudoku(board: list[list[str]]) -> bool:
-#     for x in board:
-#         for y in x:
-#             if 
-        
+def valid_sudoku(board: list[list[str]]) -> bool:
+    dizionario_di_controllo: dict = {}
+    # controllo che in ogni riga non venga ripetuto nessun numero
+    for riga in board:
+        for numero in riga:
+            if numero != "." and numero not in dizionario_di_controllo:
+                dizionario_di_controllo[numero] = 1
+            elif numero != "." and numero in dizionario_di_controllo:
+                dizionario_di_controllo[numero] += 1
+        for v in dizionario_di_controllo.values():
+            if v != 1:
+                return False
+        else:
+            dizionario_di_controllo = {}
+            continue
+    
+    posizione_verticale: int = 0
+    # ora controllo le colonne
+    while posizione_verticale <= 8:     
+        for colonna in board:
+            if colonna[posizione_verticale] != "." and colonna[posizione_verticale] not in dizionario_di_controllo:
+                dizionario_di_controllo[colonna[posizione_verticale]] = 1
+            elif colonna[posizione_verticale] != "." and colonna[posizione_verticale] in dizionario_di_controllo:
+                dizionario_di_controllo[colonna[posizione_verticale]] += 1                    
+            else:
+                continue
+        for v in dizionario_di_controllo.values():
+            if v != 1:
+                return False
+        else:
+            dizionario_di_controllo = {}
+            posizione_verticale += 1
+            continue
+    
+    # ora controllo i riquadri 3x3
+
+    da_righe = 0
+    a_righe = 3
+    da_colonne = 0
+    a_colonne = 3
+    
+    while a_righe <= 9:
+        for x in range(da_righe, a_righe):
+            riga = board[x]
+            for colonna in range(da_colonne, a_colonne):
+                numero = riga[colonna]
+                if numero != "." and numero not in dizionario_di_controllo:
+                    dizionario_di_controllo[numero] = 1
+                elif numero != "." and numero in dizionario_di_controllo:
+                    dizionario_di_controllo[numero] += 1
+                else:
+                    continue
+        da_colonne +=3
+        a_colonne += 3
+        if a_colonne > 9:
+            da_colonne = 0
+            a_colonne = 3
+            da_righe += 3
+            a_righe += 3
+        for v in dizionario_di_controllo.values():
+            if v != 1:
+                return False
+        dizionario_di_controllo = {}
+    
+    return True
 
 
 # esercizio 4
@@ -196,6 +256,23 @@ class Library:
     def get_borrowed_books(self, member_id: str) -> list[Book]:
         return self.members[member_id].borrowed_books
 
+# Data l'inizio di una lista concatenata, invertire la lista e restituire la lista invertita.
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+        
+def reverse_list(head: ListNode) -> list[int]:
+    unpacked=[]
+    while True:
+        unpacked.append(head.val)
+        if head.next:
+            head=head.next
+        else:
+            return unpacked[::-1]
+
+
 
 # esercizio 6:
 
@@ -260,4 +337,3 @@ def anagram(s: str, t: str) -> bool:
     else:
         return False
 
-print(anagram("anagram","anargame")) 
