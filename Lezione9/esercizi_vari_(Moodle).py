@@ -208,7 +208,7 @@ class Member:
         self.borrowed_books.append(book.title)
     
     def return_book(self, book: Book):
-        self.borrowed_books.remove(book)
+        self.borrowed_books.remove(book.title)
 
 #     Classe Library:
 #         Attributi:
@@ -240,18 +240,20 @@ class Library:
                 if self.books[book_id].is_borrowed != True:
                     self.books[book_id].borrow_book()
                     self.members[member_id].borrow_book(self.books[book_id])
-                else:
-                    return "Book is already borrowed"
+                elif self.books[book_id].is_borrowed == True:
+                    print("Book is already borrowed")
             else:
-                return "Book not found"
+                print("Book not found")
         else:
-            return "Member not found"
+            print("Member not found")
 
     def return_book (self, member_id: str, book_id: str):
-        if member_id in self.members and book_id in self.books:
-            self.members[member_id].return_book(self.books[book_id])
-        else:
-            return "Book not borrowed by this member"
+        if member_id in self.members and book_id in self.books: 
+            if self.books[book_id].title in self.members[member_id].borrowed_books:
+                self.members[member_id].return_book(self.books[book_id])
+                self.books[book_id].return_book()
+            else:
+                print("Book not borrowed by this member")
     
     def get_borrowed_books(self, member_id: str) -> list[Book]:
         return self.members[member_id].borrowed_books
@@ -324,9 +326,9 @@ def anagram(s: str, t: str) -> bool:
     if len(s) == len(t):
         lista_vuota = []
         lista_vuota2 = []
-        for lettera in s:
+        for lettera in s.lower():
             lista_vuota2.append(lettera)
-        for lettera in t:
+        for lettera in t.lower():
             if lettera in lista_vuota2:
                 lista_vuota.append(lettera)
                 lista_vuota2.remove(lettera)
