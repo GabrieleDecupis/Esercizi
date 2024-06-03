@@ -22,26 +22,23 @@ class Circle(Shape):
         self.raggio = raggio
 
     def area(self) -> float:
-        area = 3.14 * (raggio ** 2)
+        area = 3.14 * (self.raggio ** 2)
         return area
     
     def perimeter(self) -> float:
-        perimeter = 3.14 * raggio * 2
+        perimeter = 3.14 * self.raggio * 2
         return perimeter
 
 class Rectangle(Shape):
+    def __init__(self, base: float, altezza: float) -> float:
+        self.base = base
+        self.altezza = altezza
 
-
-    def area(base: float, altezza: float) -> float:
-        area = base * altezza
+    def area(self) -> float:
+        area = self.base * self.altezza
         return area
     
-    def perimeter(base: float, altezza: float) -> float:
-        perimeter = (base + altezza) * 2
+    def perimeter(self) -> float:
+        perimeter = (self.base + self.altezza) * 2
         return perimeter
-    
 
-rett1 = Rectangle()
-A = rett1.area(10.0, 2.0)
-print(A)
-        
