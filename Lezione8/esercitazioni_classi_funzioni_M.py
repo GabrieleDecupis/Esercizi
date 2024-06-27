@@ -135,8 +135,8 @@ def longest_palindrome(s: str) -> int:
 
 
  
-print(longest_palindrome("abccccdd"))
-print(longest_palindrome("abcabcabc"))
+# print(longest_palindrome("abccccdd"))
+# print(longest_palindrome("abcabcabc"))
         
 
 # Esercizio 4 
@@ -170,6 +170,16 @@ def merge(nums1: list, m, nums2: list, n):
 # merge(nums1, m, nums2, n)
 # print(nums1)  
 # [1, 2, 2, 3, 5, 6]
+
+# Esercizio 5
+
+# Given the head of a singly linked list, return true if it is a palindrome. Model the Node and Linked List concepts using classes.
+
+class LinkedList:
+    pass
+        
+def is_palindrome(head: Node) -> list[int]:
+    pass
 
 # Esercizio 6
 
