@@ -175,11 +175,39 @@ def merge(nums1: list, m, nums2: list, n):
 
 # Given the head of a singly linked list, return true if it is a palindrome. Model the Node and Linked List concepts using classes.
 
+              
+
 class LinkedList:
-    pass
+    def __init__(self, head = None):     # standard
+        self.head = head     
+
+    def append(self, value)-> None:
+        if self.head is None:
+            self.head = Node(value)
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = Node(value)
+
+class Node:
+    def __init__(self, value) -> None:  # standard
+        self.value = value
+        self.next = None
+
+    def __str__(self):
+        return str(self.value) 
+    
         
 def is_palindrome(head: Node) -> list[int]:
-    pass
+    
+    lista_controllo = []
+    while head:
+        lista_controllo.append(head.value)
+        head = head.next
+    return lista_controllo == lista_controllo[::-1]
+
+   
 
 # Esercizio 6
 
@@ -193,7 +221,6 @@ def is_palindrome(head: Node) -> list[int]:
 #     Every close bracket has a corresponding open bracket of the same type.
 
 def is_valid_parenthesis(s: str) -> bool:
-    
     dict1: dict = {'(': 1, '[': 2, '{': 3}
     dict2: dict = {')': 1, ']': 2, '}': 3}
     lista_controllo = []
