@@ -81,5 +81,3 @@ class Email(Document):
 
 
 
-email1 = Email("io", "tu", "egli", "ciao")
-print(email1.get_text())
