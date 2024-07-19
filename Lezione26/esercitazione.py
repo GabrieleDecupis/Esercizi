@@ -63,7 +63,9 @@ class CifratoreAScorrimento(CodificatoreMessaggio, DecodificatoreMessaggio):
 #     Suggerimento: si potrebbe definire un metodo privato combinazione(testo) che esegue la combinazione del testo 
 # e ritorni il testo cifrato da usare nel metodo codifica(testoInChiaro).
 
-
+class CifratoreACombinazione(CodificatoreMessaggio, DecodificatoreMessaggio):
+    def __init__(self, n: int) -> None:
+        
 
 # Si scriva il metodo decodifica(testoCodificato) per ognuna delle classi CifrarioAScorrimento e CifrarioACombinazione.
 
