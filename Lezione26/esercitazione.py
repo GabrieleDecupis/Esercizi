@@ -65,7 +65,43 @@ class CifratoreAScorrimento(CodificatoreMessaggio, DecodificatoreMessaggio):
 
 class CifratoreACombinazione(CodificatoreMessaggio, DecodificatoreMessaggio):
     def __init__(self, n: int) -> None:
-        
+        self.n = n
+    
+    def codifica(self, testoInChiaro)-> None:
+        # divido la parola
+        s2 = []
+        s3 = []
+        if len(testoInChiaro) % 2 == 0:
+            count = 0
+            for x in testoInChiaro:
+                if count < len(testoInChiaro)//2:
+                    s2.append(x)
+                    count += 1
+                else:
+                    s3.append(x)
+                    count += 1
+        else:
+            count = 0
+            for x in testoInChiaro:
+                if count < ((len(testoInChiaro)//2) + 1) :
+                    s2.append(x)
+                    count += 1
+                else:
+                    s3.append(x)
+                    count += 1
+        stringa1 = ""
+        stringa2 = ""
+        stringa1 = stringa1.join(x for x in s2)
+        stringa2 = stringa2.join(x for x in s3)
+
+
+
+
+
+
+
+
+
 
 # Si scriva il metodo decodifica(testoCodificato) per ognuna delle classi CifrarioAScorrimento e CifrarioACombinazione.
 
